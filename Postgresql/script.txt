@@ -4,68 +4,68 @@
 /*
     Schema descriptor
     ------------------
-    SELECT 
+    select 
     column_name, 
     data_type, 
     character_maximum_length, 
     is_nullable, 
     column_default
-FROM 
+from 
     information_schema.columns
-WHERE 
+where 
     table_schema = 'public'
     AND table_name = 'country';
 
 ----------------------------------
 */
 //Country table
-CREATE TABLE IF NOT EXISTS Country (
+CREATE table IF NOT EXISTS Country (
     Id SERIAL PRIMARY KEY,
     CountryName VARCHAR(255)
 );
 
 
 //City table
-CREATE TABLE IF NOT EXISTS City (
+CREATE table IF NOT EXISTS City (
     Id SERIAL PRIMARY KEY,
     CountryId INT REFERENCES Country(Id),
     CityName VARCHAR(255)
 );
 
 //MissionSkill table
-CREATE TABLE IF NOT EXISTS MissionSkill(
+CREATE table IF NOT EXISTS MissionSkill(
     Id SERIAL PRIMARY KEY,
     SkillName VARCHAR(255),
     Status VARCHAR(50)
 );
 
 //MissionTheme table
-CREATE TABLE IF NOT EXISTS MissionTheme(
+CREATE table IF NOT EXISTS MissionTheme(
     Id SERIAL PRIMARY KEY,
     ThemeName VARCHAR(255),
     Status VARCHAR(50)
 );
 
 //User table
-CREATE TABLE IF NOT EXISTS User(
+CREATE table IF NOT EXISTS User(
     Id SERIAL PRIMARY KEY,
     FirstName VARCHAR(255),
     LastName VARCHAR(255),
     PhoneNumber VARCHAR(20),
-    EmailAddress VARCHAR(255) UNIQUE,
+    Emailaddress VARCHAR(255) UNIQUE,
     UserType VARCHAR(255),
     Password VARCHAR(255)
 );
 
 //UserSkills table
-CREATE TABLE IF NOT EXISTS UserSkills (
+CREATE table IF NOT EXISTS UserSkills (
     Id SERIAL PRIMARY KEY,
     Skill VARCHAR(255),
     UserId INT REFERENCES "User"(Id)
 );
 
 //UserDetail table
-CREATE TABLE IF NOT EXISTS UserDetail (
+CREATE table IF NOT EXISTS UserDetail (
     Id SERIAL PRIMARY KEY,
     UserId INT REFERENCES "User"(Id),
     Name VARCHAR(255),
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS UserDetail (
 );
 
 //Missions table
-CREATE TABLE Missions (
+CREATE table Missions (
     Id SERIAL PRIMARY KEY,
     MissionTitle VARCHAR(255),
     MissionDescription TEXT,
@@ -108,7 +108,7 @@ CREATE TABLE Missions (
 );
 
 //MissionApplication
-CREATE TABLE MissionApplication (
+CREATE table MissionApplication (
     Id SERIAL PRIMARY KEY,
     MissionId INT REFERENCES Missions(Id),
     UserId INT REFERENCES "User"(Id),

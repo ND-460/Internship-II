@@ -1,0 +1,38 @@
+select * from city where country_id in (select country_id from country where country='India');
+
+select count(*) from film group by film.release_year having film.release_year>2000;
+
+alter table customer add COLUMN active boolean;
+
+alter table customer RENAME COLUMN email TO email_address;
+
+insert INTO customer(first_name, last_name, email, created_date, updated_date, active)
+	VALUES ('Neel','Patel','neel213@gmail.com',now(),NULL,false);
+
+select customer_id, first_name, last_name, email, created_date, updated_date, active
+from customer;
+
+delete from customer
+where customer_id = 12;
+
+UPDATE customer
+SET first_name='Neel',
+last_name='Patel', 
+email='neel321@gmail.com'
+where customer_id = 22;
+
+select first_name,last_name from customer ORDER BY last_name DESC;
+
+select customer_id,first_name,last_name from customer 
+where first_name = 'Neel' AND last_name = 'Patel';
+
+select * from orders as o 
+LEFT JOIN customer as c
+ON o.customer_id = c.customer_id;
+
+select c.customer_id,c.first_name,c.last_name,c.email,COUNT (o.order_id) AS "NoOrders", SUM(o.order_amount) AS "Total"
+from customer as c
+INNER JOIN orders as o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id
+having count(o.order_id) > 1
+
