@@ -1,0 +1,24 @@
+
+<p>Enter the book</p>
+<input type="text" [(ngModel)]="bookname" />
+<p *ngIf="bookname !== ''">Book: {{bookname}}</p>
+<button (click)="addItem()">Add Item</button>
+
+<table *ngIf="books.length > 0">
+  <tr>
+    <th>Book name</th>
+    <th>Is rented?</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>
+        <span *ngIf="!book.isrented">{{book.name}}</span>
+        <s *ngIf="book.isrented">{{book.name}}</s>
+    </td>
+
+    <td><input type="checkbox" [(ngModel)]="book.isrented"></td>
+    <td><button (click)="updateItem(book)">Update</button></td>
+    <td><button (click)="deleteItem(book)">Delete</button></td>
+  </tr>
+</table>
