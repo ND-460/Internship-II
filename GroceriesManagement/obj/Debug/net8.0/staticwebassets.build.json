@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qHWZjstti2xBJhGgv9H1rWnPwM+jO2wB6RmimWccplE=",
+  "Source": "GroceriesManagement",
+  "BasePath": "_content/GroceriesManagement",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

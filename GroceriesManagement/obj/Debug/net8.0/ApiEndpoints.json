@@ -1,0 +1,96 @@
+[
+  {
+    "ContainingType": "GroceriesManagement.Controllers.GroceriesController",
+    "Method": "AddGrocery",
+    "RelativePath": "api/Groceries/AddGrocery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grocery",
+        "Type": "GroceriesManagement.Models.Grocery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GroceriesManagement.Controllers.GroceriesController",
+    "Method": "DeleteGrocery",
+    "RelativePath": "api/Groceries/DeleteGrocery",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GroceriesManagement.Controllers.GroceriesController",
+    "Method": "GetAllGroceries",
+    "RelativePath": "api/Groceries/GetAllGroceries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GroceriesManagement.Models.Grocery, GroceriesManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GroceriesManagement.Controllers.GroceriesController",
+    "Method": "GetParticularGrocery",
+    "RelativePath": "api/Groceries/GetParticularGrocery",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GroceriesManagement.Models.Grocery, GroceriesManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GroceriesManagement.Controllers.GroceriesController",
+    "Method": "UpdateGrocery",
+    "RelativePath": "api/Groceries/UpdateGrocery",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grocery",
+        "Type": "GroceriesManagement.Models.Grocery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
