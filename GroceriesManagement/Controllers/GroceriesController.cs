@@ -2,11 +2,13 @@
 using Groceries.Services.Services;
 using Groceries.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 //using GroceriesManagement.Models;
 namespace GroceriesManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class GroceriesController : ControllerBase
     {
         private readonly GroceriesService _groceryservice;
@@ -16,6 +18,7 @@ namespace GroceriesManagement.Controllers
         }
 
         [HttpGet("GetAllGroceries")]
+        
         public ActionResult<List<Grocery>> GetAllGroceries()
         {
             List<Grocery> groceries = _groceryservice.GetAllGrocery();

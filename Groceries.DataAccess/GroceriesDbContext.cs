@@ -14,5 +14,6 @@ namespace Groceries.DataAccess
         {
         }
         public DbSet<Grocery> Groceries { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -142,3 +142,11 @@ D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Groceries.DataAccess.dll
 D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Groceries.Services.dll
 D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Groceries.DataAccess.pdb
 D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Groceries.Services.pdb
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Internship-II\GroceriesManagement\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
