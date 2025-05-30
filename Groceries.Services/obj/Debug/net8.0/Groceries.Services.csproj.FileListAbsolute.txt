@@ -1,0 +1,16 @@
+D:\Internship-II\Groceries.Services\bin\Debug\net8.0\Groceries.Services.deps.json
+D:\Internship-II\Groceries.Services\bin\Debug\net8.0\Groceries.Services.dll
+D:\Internship-II\Groceries.Services\bin\Debug\net8.0\Groceries.Services.pdb
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.AssemblyInfoInputs.cache
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.AssemblyInfo.cs
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.csproj.CoreCompileInputs.cache
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.sourcelink.json
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.dll
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\refint\Groceries.Services.dll
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.pdb
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\ref\Groceries.Services.dll
+D:\Internship-II\Groceries.Services\bin\Debug\net8.0\Groceries.DataAccess.dll
+D:\Internship-II\Groceries.Services\bin\Debug\net8.0\Groceries.DataAccess.pdb
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Groceries.Services.csproj.AssemblyReference.cache
+D:\Internship-II\Groceries.Services\obj\Debug\net8.0\Grocerie.2C30961B.Up2Date

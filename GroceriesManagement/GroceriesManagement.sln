@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceriesManagement", "GroceriesManagement.csproj", "{5905403A-DB58-4386-9221-4644E859E7BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groceries.DataAccess", "..\Groceries.DataAccess\Groceries.DataAccess.csproj", "{FFA5C4CD-AF8C-48D1-8FA4-2C6FB6E7ABE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groceries.Services", "..\Groceries.Services\Groceries.Services.csproj", "{C5716BAB-76DA-48C5-A04D-071362F63F10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5905403A-DB58-4386-9221-4644E859E7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5905403A-DB58-4386-9221-4644E859E7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5905403A-DB58-4386-9221-4644E859E7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA5C4CD-AF8C-48D1-8FA4-2C6FB6E7ABE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA5C4CD-AF8C-48D1-8FA4-2C6FB6E7ABE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA5C4CD-AF8C-48D1-8FA4-2C6FB6E7ABE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA5C4CD-AF8C-48D1-8FA4-2C6FB6E7ABE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5716BAB-76DA-48C5-A04D-071362F63F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5716BAB-76DA-48C5-A04D-071362F63F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5716BAB-76DA-48C5-A04D-071362F63F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5716BAB-76DA-48C5-A04D-071362F63F10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

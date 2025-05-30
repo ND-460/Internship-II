@@ -1,5 +1,10 @@
 
-using GroceriesManagement.Services;
+using Groceries.DataAccess;
+using Groceries.DataAccess.Repository;
+using Groceries.Services.Services;
+
+//using GroceriesManagement.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace GroceriesManagement
 {
@@ -12,7 +17,9 @@ namespace GroceriesManagement
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddSingleton<GroceryService>();
+            builder.Services.AddDbContext<GroceriesDbContext>(db => db.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<GroceriesService>();
+            builder.Services.AddScoped<GroceriesRepository>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

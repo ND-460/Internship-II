@@ -174,6 +174,53 @@
           }
         }
       }
+    },
+    "/api/Groceries/GetFilteredGroceryByCategory": {
+      "get": {
+        "tags": [
+          "Groceries"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Grocery"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Grocery"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Grocery"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -181,19 +228,19 @@
       "Grocery": {
         "type": "object",
         "properties": {
-          "grocery_Id": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },
-          "grocery_Name": {
+          "name": {
             "type": "string",
             "nullable": true
           },
-          "grocery_Description": {
+          "category": {
             "type": "string",
             "nullable": true
           },
-          "grocery_Price": {
+          "price": {
             "type": "integer",
             "format": "int32"
           }

@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "grocery",
-        "Type": "GroceriesManagement.Models.Grocery",
+        "Type": "Groceries.DataAccess.Models.Grocery",
         "IsRequired": true
       }
     ],
@@ -41,7 +41,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[GroceriesManagement.Models.Grocery, GroceriesManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Groceries.DataAccess.Models.Grocery, Groceries.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GroceriesManagement.Controllers.GroceriesController",
+    "Method": "GetFilteredCategory",
+    "RelativePath": "api/Groceries/GetFilteredGroceryByCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Groceries.DataAccess.Models.Grocery, Groceries.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -67,7 +93,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[GroceriesManagement.Models.Grocery, GroceriesManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Groceries.DataAccess.Models.Grocery, Groceries.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -87,7 +113,7 @@
     "Parameters": [
       {
         "Name": "grocery",
-        "Type": "GroceriesManagement.Models.Grocery",
+        "Type": "Groceries.DataAccess.Models.Grocery",
         "IsRequired": true
       }
     ],
