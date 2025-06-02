@@ -18,7 +18,7 @@ namespace GroceriesManagement.Controllers
         }
 
         [HttpGet("GetAllGroceries")]
-        
+        [Authorize(Roles ="admin,manager")]
         public ActionResult<List<Grocery>> GetAllGroceries()
         {
             List<Grocery> groceries = _groceryservice.GetAllGrocery();
@@ -37,6 +37,7 @@ namespace GroceriesManagement.Controllers
             return Ok(grocery);
         }
         [HttpPost("AddGrocery")]
+        [Authorize(Roles ="admin")]
         public ActionResult AddGrocery(Grocery grocery)
         {
             _groceryservice.AddGrocery(grocery);

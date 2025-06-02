@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Groceries.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+671ff12cc845b7305ea82a8d1a378e997e849046")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcb07d41bdde310933df395e36c4257b263352cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Groceries.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Groceries.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

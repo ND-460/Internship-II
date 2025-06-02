@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Internship-II\\GroceriesManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|d:\\internship-ii\\groceriesmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|d:\\internship-ii\\groceriesmanagement\\controllers\\groceriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|solutionrelative:controllers\\groceriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|d:\\internship-ii\\groceriesmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|d:\\internship-ii\\groceriesmanagement\\helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|solutionrelative:helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|d:\\internship-ii\\groceriesmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5905403A-DB58-4386-9221-4644E859E7BB}|GroceriesManagement.csproj|d:\\internship-ii\\groceriesmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,20 +46,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GroceriesController.cs",
               "DocumentMoniker": "D:\\Internship-II\\GroceriesManagement\\Controllers\\GroceriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\GroceriesController.cs",
               "ToolTip": "D:\\Internship-II\\GroceriesManagement\\Controllers\\GroceriesController.cs",
               "RelativeToolTip": "Controllers\\GroceriesController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T08:28:55.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "LoginResDto.cs",
               "DocumentMoniker": "D:\\Internship-II\\GroceriesManagement\\Dto\\LoginResDto.cs",
               "RelativeDocumentMoniker": "Dto\\LoginResDto.cs",
@@ -71,51 +67,37 @@
               "RelativeToolTip": "Dto\\LoginResDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T08:23:43.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T08:23:43.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Internship-II\\GroceriesManagement\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Internship-II\\GroceriesManagement\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T08:20:25.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "JwtHelper.cs",
               "DocumentMoniker": "D:\\Internship-II\\GroceriesManagement\\Helpers\\JwtHelper.cs",
               "RelativeDocumentMoniker": "Helpers\\JwtHelper.cs",
               "ToolTip": "D:\\Internship-II\\GroceriesManagement\\Helpers\\JwtHelper.cs",
               "RelativeToolTip": "Helpers\\JwtHelper.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T08:11:02.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Internship-II\\GroceriesManagement\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Internship-II\\GroceriesManagement\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T08:06:56.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Internship-II\\GroceriesManagement\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -123,8 +105,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-30T08:03:13.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T08:03:13.89Z"
             }
           ]
         }

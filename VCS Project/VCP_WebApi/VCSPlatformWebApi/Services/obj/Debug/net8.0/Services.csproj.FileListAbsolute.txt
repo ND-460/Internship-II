@@ -1,0 +1,16 @@
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\bin\Debug\net8.0\Services.deps.json
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\bin\Debug\net8.0\Services.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\bin\Debug\net8.0\Services.pdb
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.sourcelink.json
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\refint\Services.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.pdb
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\ref\Services.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\bin\Debug\net8.0\DataAccess.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\bin\Debug\net8.0\DataAccess.pdb
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\Services\obj\Debug\net8.0\Services.csproj.Up2Date

@@ -1,0 +1,15 @@
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\bin\Debug\net8.0\DataAccess.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+D:\Internship-II\VCS Project\VCP_WebApi\VCSPlatformWebApi\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

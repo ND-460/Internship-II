@@ -22,7 +22,7 @@ namespace GroceriesManagement.Helpers
             {
                 new Claim("Name", user.Name),
                 new Claim("Email", user.Email),
-                new Claim("Role", user.Role),
+                new Claim(ClaimTypes.Role, user.Role),
             };
 
             var token = new JwtSecurityToken(
