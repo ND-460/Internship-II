@@ -2,12 +2,10 @@ import { NgIf } from "@angular/common"
 import { Component, OnDestroy, OnInit } from "@angular/core"
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms"
 import { Router, RouterModule } from "@angular/router"
-import { NgToastService } from "ng-angular-popup"
+// import { NgToastService,NgToastModule } from "ng-angular-popup"
 import { Subscription } from "rxjs"
-// import { APP_CONFIG } from "src/app/main/configs/environment.config"
-import { APP_CONFIG } from "../../main/configs/environment.config"
-// import { AuthService } from "src/app/main/services/auth.service"
-import { AuthService } from "../../main/services/auth.service"
+import { APP_CONFIG } from "src/app/main/configs/environment.config"
+import { AuthService } from "src/app/main/services/auth.service"
 
 @Component({
   selector: "app-login",
@@ -15,6 +13,7 @@ import { AuthService } from "../../main/services/auth.service"
   imports: [ReactiveFormsModule, NgIf, RouterModule],
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"],
+  // providers:[NgToastService]
 })
 export class LoginComponent implements OnInit, OnDestroy {
   private unsubscribe: Subscription[] = [];
@@ -23,13 +22,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     private _fb: FormBuilder,
     private _service: AuthService,
     private _router: Router,
-    private _toast: NgToastService,
+    // private _toast: NgToastService,
   ) { }
-  // loginForm: FormGroup
-  // formValid: boolean
-  loginForm!: FormGroup;
-  formValid: boolean = false;
-
+  loginForm!: FormGroup
+  formValid!: boolean
   ngOnInit(): void {
     this.loginUser()
   }
@@ -57,9 +53,7 @@ export class LoginComponent implements OnInit, OnDestroy {
               const tokenpayload = this._service.decodedToken()
               this._service.setCurrentUser(tokenpayload)
 
-              // this._toast.success({ detail: "SUCCESS", summary: res.data.message, duration: APP_CONFIG.toastDuration})
-              this._toast.success("SUCCESS: " + res.data.message);
-
+              // this._toast.success("SUCCESS",res.data.message,APP_CONFIG.toastDuration )
               if (tokenpayload.userType == "admin") {
                 this._router.navigate(["admin/dashboard"])
               } else {
@@ -67,11 +61,11 @@ export class LoginComponent implements OnInit, OnDestroy {
               }
             } else {
               // this.toastr.error(res.data.message);
-              this._toast.error({ detail: "ERROR", summary: res.data.message, duration: APP_CONFIG.toastDuration })
+              // this._toast.danger(  "ERROR",  res.data.message, APP_CONFIG.toastDuration )
             }
           } else {
             // this.toastr.error(res.message);
-            this._toast.error({ detail: "ERROR", summary: res.message, duration: APP_CONFIG.toastDuration })
+            // this._toast.danger( "ERROR",  res.message,  APP_CONFIG.toastDuration )
           }
         })
       this.formValid = false
