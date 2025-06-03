@@ -40,7 +40,12 @@ namespace Groceries.DataAccess.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("integer");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Groceries");
                 });
@@ -72,6 +77,32 @@ namespace Groceries.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = -1,
+                            Email = "admin@groceries.com",
+                            Name = "admin",
+                            Password = "admin",
+                            Role = "admin"
+                        });
+                });
+
+            modelBuilder.Entity("Groceries.DataAccess.Models.Grocery", b =>
+                {
+                    b.HasOne("Groceries.DataAccess.Models.User", "User")
+                        .WithMany("Groceries")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Groceries.DataAccess.Models.User", b =>
+                {
+                    b.Navigation("Groceries");
                 });
 #pragma warning restore 612, 618
         }

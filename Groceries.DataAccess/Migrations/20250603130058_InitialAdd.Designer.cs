@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Groceries.DataAccess.Migrations
 {
     [DbContext(typeof(GroceriesDbContext))]
-    [Migration("20250530065029_MigratedUsers")]
-    partial class MigratedUsers
+    [Migration("20250603130058_InitialAdd")]
+    partial class InitialAdd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,15 +43,23 @@ namespace Groceries.DataAccess.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("integer");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Groceries");
                 });
 
             modelBuilder.Entity("Groceries.DataAccess.Models.User", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -72,6 +80,32 @@ namespace Groceries.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = -1,
+                            Email = "admin@groceries.com",
+                            Name = "admin",
+                            Password = "admin",
+                            Role = "admin"
+                        });
+                });
+
+            modelBuilder.Entity("Groceries.DataAccess.Models.Grocery", b =>
+                {
+                    b.HasOne("Groceries.DataAccess.Models.User", "User")
+                        .WithMany("Groceries")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Groceries.DataAccess.Models.User", b =>
+                {
+                    b.Navigation("Groceries");
                 });
 #pragma warning restore 612, 618
         }

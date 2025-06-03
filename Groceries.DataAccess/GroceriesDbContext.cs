@@ -15,5 +15,19 @@ namespace Groceries.DataAccess
         }
         public DbSet<Grocery> Groceries { get; set; }
         public DbSet<User> Users { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().HasData(new User()
+            {
+                Id = -1,
+                Name = "admin",
+                Email = "admin@groceries.com",
+                Role = "admin",
+                Password = "admin"
+            });
+            base.OnModelCreating(modelBuilder);
+
+        }
+
     }
 }

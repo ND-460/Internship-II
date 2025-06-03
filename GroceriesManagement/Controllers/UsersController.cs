@@ -1,4 +1,5 @@
-﻿using Groceries.DataAccess.Models;
+﻿using Groceries.DataAccess.DtoHelper;
+using Groceries.DataAccess.Models;
 using Groceries.Services.Services;
 using GroceriesManagement.Dto;
 using GroceriesManagement.Helpers;
@@ -42,6 +43,11 @@ namespace GroceriesManagement.Controllers
             return Ok(new LoginResDto() { Email = user.Email, Name = user.Name, Role = user.Role, Token = token});
             
         }
-
+        [HttpPost("/GetAllUserNew")]
+        public ActionResult<List<UserVM>> GetAllUserNew([FromBody] FilterVM filterVM)
+        {
+            var data = _usersService.GetAllUsersNew(filterVM);
+            return Ok(data);
+        }
     }
 }
