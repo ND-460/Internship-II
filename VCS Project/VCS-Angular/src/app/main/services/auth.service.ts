@@ -48,8 +48,8 @@ export class AuthService {
     return this.http.post(
       `${this.apiUrl}${API_ENDPOINTS.AUTH.LOGIN}`,
       {
-        EmailAddress: loginInfo[0],
-        Password: loginInfo[1],
+        emailAddress: loginInfo[0],
+        password: loginInfo[1],
       },
       { responseType: 'json' }
     );

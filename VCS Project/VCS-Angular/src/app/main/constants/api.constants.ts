@@ -1,17 +1,17 @@
 export const API_ENDPOINTS = {
   AUTH: {
-    REGISTER: '/auth/register',
-    LOGIN: '/auth/login',
-    GET_USER_BY_ID: '/auth/user',  
-    UPDATE_USER: '/auth/update-user',
-    FORGOT_PASSWORD: '/auth/forgot-password',
-    RESET_PASSWORD: '/auth/reset-password',
-    CHANGE_PASSWORD: '/auth/change-password',
+    REGISTER: 'api/AddUser',
+    LOGIN: 'Login',
+    GET_USER_BY_ID: 'api/GetUser',  
+    UPDATE_USER: 'api/UpdateUser',
+    FORGOT_PASSWORD: 'api/forgot-password',
+    RESET_PASSWORD: 'api/reset-password',
+    CHANGE_PASSWORD: 'api/change-password',
   },
 
-  // You can add other endpoint groups if needed, e.g.:
+ 
   USER: {
-    GET_ALL: '/user/all',
-    DELETE: '/user/delete', // etc.
+    GET_ALL: 'api/GetAll',
+    DELETE: 'api/delete', // etc.
   }
 };

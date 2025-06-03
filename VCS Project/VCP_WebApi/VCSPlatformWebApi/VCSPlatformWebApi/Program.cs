@@ -14,6 +14,16 @@ namespace VCSPlatformWebApi
 
             // Add services to the container.
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -31,6 +41,9 @@ namespace VCSPlatformWebApi
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("AllowAngularApp");
+
+            app.UseHttpsRedirection();
             app.UseAuthorization();
 
 
