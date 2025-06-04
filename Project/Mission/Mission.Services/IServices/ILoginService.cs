@@ -1,4 +1,5 @@
 ﻿using Mission.Entities;
+using Mission.Entities.Dto;
 using Mission.Entities.Models;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace Mission.Services.IServices
 
         List<User> GetUsersById(int id);
 
-        List<User> LoginUserDetailById(int id);
+        User LoginUserDetailById(int id);
+
+        User UpdateUser(UpdateUserDto updateUserDto);
     }
 }

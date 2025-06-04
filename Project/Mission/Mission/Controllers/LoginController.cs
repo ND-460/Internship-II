@@ -3,6 +3,7 @@ using Mission.Entities.Models;
 using Mission.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Mission.Entities.Dto;
 
 namespace Mission.Controllers
 {
@@ -61,7 +62,7 @@ namespace Mission.Controllers
         }
         [HttpGet]
         [Route("LoginUserDetailById/{id}")]
-        public ActionResult<List<User>> LoginUserDetailById(int id)
+        public ActionResult<User> LoginUserDetailById(int id)
         {
             try
             {
@@ -73,5 +74,30 @@ namespace Mission.Controllers
                 return NotFound("Login User not found");
             }
         }
+        [HttpPost]
+        [Route("UpdateUser")]
+        public ActionResult UpdateUser([FromForm] UpdateUserDto userData)
+        {
+            try
+            {
+                var updatedUser = _loginService.UpdateUser(userData);
+                return Ok(new ResponseResult
+                {
+                    Data = updatedUser,
+                    Result = ResponseStatus.Success,
+                    Message = "User updated successfully"
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ResponseResult
+                {
+                    Data = null,
+                    Result = ResponseStatus.Error,
+                    Message = ex.Message
+                });
+            }
+        }
+
     }
 }

@@ -93,7 +93,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Mission.Entities.User, Mission.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Mission.Entities.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -115,6 +115,47 @@
         "Name": "model",
         "Type": "Mission.Entities.Models.RegisterUserModel",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mission.Controllers.LoginController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Login/UpdateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserImage",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

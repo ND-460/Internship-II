@@ -1,5 +1,6 @@
 ﻿using Mission.Entities;
 using Mission.Entities.Context;
+using Mission.Entities.Dto;
 using Mission.Entities.Models;
 using Mission.Repositories.IRepositories;
 using System;
@@ -63,15 +64,26 @@ namespace Mission.Repositories
             _cIDbContext.SaveChanges();
             return "User Added!";
         }
+        public User GetUser(int id)
+        {
+            var res = _cIDbContext.User.FirstOrDefault(x => x.Id == id);
+            return res;
+        }
         public List<User> GetUsersById(int id)
         {
             var res = _cIDbContext.User.Where(u => u.Id == id).ToList();
             return res;
         }
-        public List<User> LoginUserDetailById(int id)
+        public User LoginUserDetailById(int id)
         {
-            var res = _cIDbContext.User.Where(u => u.Id == id).ToList();
+            var res = _cIDbContext.User.FirstOrDefault(u => u.Id == id);
             return res;
+        }
+        public User UpdateUser(User user)
+        {
+            _cIDbContext.User.Update(user);
+            _cIDbContext.SaveChanges();
+            return user;
         }
     }
 }

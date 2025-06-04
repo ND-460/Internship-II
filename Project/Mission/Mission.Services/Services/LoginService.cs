@@ -10,6 +10,7 @@ using Mission.Repositories.IRepositories;
 using Mission.Entities;
 using Mission.Entities.Models;
 using Mission.Repositories.Helpers;
+using Mission.Entities.Dto;
 
 namespace Mission.Services
 {
@@ -50,9 +51,23 @@ namespace Mission.Services
         {
             return _loginRepository.GetUsersById(id);
         }
-        public List<User> LoginUserDetailById(int id)
+        public User LoginUserDetailById(int id)
         {
             return _loginRepository.LoginUserDetailById(id);
+        }
+        public User UpdateUser(UpdateUserDto updateUserDto)
+        {
+            var user = _loginRepository.GetUser(updateUserDto.Id);
+            if (user == null)
+            {
+                throw new Exception("User not found");
+            }
+            user.FirstName = updateUserDto.FirstName;
+            user.LastName = updateUserDto.LastName;
+            user.PhoneNumber = updateUserDto.PhoneNumber;
+            user.EmailAddress = updateUserDto.EmailAddress;
+            user.UserImage = updateUserDto.UserImage;
+            return _loginRepository.UpdateUser(user);
         }
     }
 }

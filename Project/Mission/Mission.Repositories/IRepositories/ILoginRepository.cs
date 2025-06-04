@@ -1,4 +1,6 @@
-﻿using Mission.Entities;
+﻿using Microsoft.EntityFrameworkCore.Update.Internal;
+using Mission.Entities;
+using Mission.Entities.Dto;
 using Mission.Entities.Models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,10 @@ namespace Mission.Repositories.IRepositories
 
         List<User> GetUsersById(int id);
 
-        List<User> LoginUserDetailById(int id);
+        User LoginUserDetailById(int id);
+
+        User GetUser(int id);
+
+        User UpdateUser(User user);
     }
 }

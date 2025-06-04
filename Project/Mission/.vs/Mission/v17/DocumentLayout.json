@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "D:\\Internship-II\\Project\\Mission\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|d:\\internship-ii\\project\\mission\\mission\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|solutionrelative:mission\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|d:\\internship-ii\\project\\mission\\mission\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|solutionrelative:mission\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|d:\\internship-ii\\project\\mission\\mission.services\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|solutionrelative:mission.services\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E4BB6B5-95A8-400C-AE6A-745E2AE93471}|Mission.Entities\\Mission.Entities.csproj|d:\\internship-ii\\project\\mission\\mission.entities\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E4BB6B5-95A8-400C-AE6A-745E2AE93471}|Mission.Entities\\Mission.Entities.csproj|solutionrelative:mission.entities\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|d:\\internship-ii\\project\\mission\\mission\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|solutionrelative:mission\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|d:\\internship-ii\\project\\mission\\mission.repositories\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|solutionrelative:mission.repositories\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|d:\\internship-ii\\project\\mission\\mission.repositories\\irepositories\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|solutionrelative:mission.repositories\\irepositories\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|d:\\internship-ii\\project\\mission\\mission.services\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|solutionrelative:mission.services\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|d:\\internship-ii\\project\\mission\\mission.services\\iservices\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|solutionrelative:mission.services\\iservices\\iloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|d:\\internship-ii\\project\\mission\\mission.repositories\\irepositories\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|solutionrelative:mission.repositories\\irepositories\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|d:\\internship-ii\\project\\mission\\mission\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|solutionrelative:mission\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,39 +58,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminUserController.cs",
-              "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\AdminUserController.cs",
-              "RelativeDocumentMoniker": "Mission\\Controllers\\AdminUserController.cs",
-              "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\AdminUserController.cs",
-              "RelativeToolTip": "Mission\\Controllers\\AdminUserController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission\\Program.cs",
+              "RelativeDocumentMoniker": "Mission\\Program.cs",
+              "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission\\Program.cs",
+              "RelativeToolTip": "Mission\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T14:10:47.593Z",
+              "WhenOpened": "2025-06-04T17:35:04.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission.Entities\\Dto\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "Mission.Entities\\Dto\\UpdateUserDto.cs",
+              "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Entities\\Dto\\UpdateUserDto.cs",
+              "RelativeToolTip": "Mission.Entities\\Dto\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T16:12:44.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Mission\\Controllers\\LoginController.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Mission\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAgwEgAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAE8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T13:08:56.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "LoginService.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission.Services\\Services\\LoginService.cs",
               "RelativeDocumentMoniker": "Mission.Services\\Services\\LoginService.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Services\\Services\\LoginService.cs",
               "RelativeToolTip": "Mission.Services\\Services\\LoginService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAA8wDUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T13:07:50.813Z",
               "EditorCaption": ""
@@ -95,9 +116,10 @@
               "RelativeDocumentMoniker": "Mission.Services\\IServices\\ILoginService.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Services\\IServices\\ILoginService.cs",
               "RelativeToolTip": "Mission.Services\\IServices\\ILoginService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIAwwBMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAIAwwBQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T13:06:56.459Z"
+              "WhenOpened": "2025-06-04T13:06:56.459Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -107,22 +129,36 @@
               "RelativeDocumentMoniker": "Mission.Repositories\\Repositories\\LoginRepository.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Repositories\\Repositories\\LoginRepository.cs",
               "RelativeToolTip": "Mission.Repositories\\Repositories\\LoginRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAowE4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T13:04:24.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ILoginRepository.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission.Repositories\\IRepositories\\ILoginRepository.cs",
               "RelativeDocumentMoniker": "Mission.Repositories\\IRepositories\\ILoginRepository.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Repositories\\IRepositories\\ILoginRepository.cs",
               "RelativeToolTip": "Mission.Repositories\\IRepositories\\ILoginRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAD4vxQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T13:01:04.221Z"
+              "WhenOpened": "2025-06-04T13:01:04.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminUserController.cs",
+              "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\AdminUserController.cs",
+              "RelativeDocumentMoniker": "Mission\\Controllers\\AdminUserController.cs",
+              "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\AdminUserController.cs",
+              "RelativeToolTip": "Mission\\Controllers\\AdminUserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:10:47.593Z",
+              "EditorCaption": ""
             }
           ]
         }
