@@ -1,6 +1,0 @@
-@VCSPlatformWebApi_HostAddress = http://localhost:5276
-
-GET {{VCSPlatformWebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
