@@ -45,6 +45,33 @@ namespace Mission.Controllers
                 return BadRequest(new ResponseResult() { Data = null, Result = ResponseStatus.Error, Message = "Failed to add records" });
             }
         }
-
+        [HttpGet]
+        [Route("GetUserById")]
+        public ActionResult<List<User>> GetUsersById(int id)
+        {
+            try
+            {
+                var user = _loginService.GetUsersById(id);
+                return Ok(user);
+            }
+            catch
+            {
+                return NotFound("User not found");
+            }
+        }
+        [HttpGet]
+        [Route("LoginUserDetailById")]
+        public ActionResult<List<User>> LoginUserDetailById(int id)
+        {
+            try
+            {
+                var user = _loginService.LoginUserDetailById(id);
+                return Ok(user);
+            }
+            catch
+            {
+                return NotFound("Login User not found");
+            }
+        }
     }
 }

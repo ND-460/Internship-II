@@ -46,7 +46,13 @@ namespace Mission.Services
         {
             return _loginRepository.Register(model);
         }
-
-
+        public List<User> GetUsersById(int id)
+        {
+            return _loginRepository.GetUsersById(id);
+        }
+        public List<User> LoginUserDetailById(int id)
+        {
+            return _loginRepository.LoginUserDetailById(id);
+        }
     }
 }

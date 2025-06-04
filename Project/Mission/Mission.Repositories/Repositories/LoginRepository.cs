@@ -63,5 +63,15 @@ namespace Mission.Repositories
             _cIDbContext.SaveChanges();
             return "User Added!";
         }
+        public List<User> GetUsersById(int id)
+        {
+            var res = _cIDbContext.User.Where(u => u.Id == id).ToList();
+            return res;
+        }
+        public List<User> LoginUserDetailById(int id)
+        {
+            var res = _cIDbContext.User.Where(u => u.Id == id).ToList();
+            return res;
+        }
     }
 }

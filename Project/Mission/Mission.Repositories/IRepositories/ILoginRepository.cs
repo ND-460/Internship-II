@@ -1,4 +1,5 @@
-﻿using Mission.Entities.Models;
+﻿using Mission.Entities;
+using Mission.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,9 @@ namespace Mission.Repositories.IRepositories
         LoginUserResponseModel LoginUser(LoginUserRequestModel model);
 
         Task<string> Register(RegisterUserModel model);
+
+        List<User> GetUsersById(int id);
+
+        List<User> LoginUserDetailById(int id);
     }
 }

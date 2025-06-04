@@ -35,7 +35,7 @@ export class AddUserComponent implements OnInit, OnDestroy {
     private _toast: NgToastService,
   ) {}
   registerForm: FormGroup
-  formValid: boolean
+  formValid: boolean = false
 
   ngOnInit(): void {
     this.createRegisterForm()
