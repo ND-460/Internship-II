@@ -25,12 +25,12 @@ namespace Mission.Controllers
         }
 
         [HttpDelete]
-        [Route("DeleteUser")]
-        public ActionResult DeleteUser([FromQuery] int id)
+        [Route("DeleteUser/{userId}")]
+        public ActionResult DeleteUser( int userId)
         {
             try
             {
-                var res = _adminUserService.UserDelete(id);
+                var res = _adminUserService.UserDelete(userId);
                 return Ok(new ResponseResult() { Data = res, Result = ResponseStatus.Success, Message = "" });
             }
             catch

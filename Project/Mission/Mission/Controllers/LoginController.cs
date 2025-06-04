@@ -60,7 +60,7 @@ namespace Mission.Controllers
             }
         }
         [HttpGet]
-        [Route("LoginUserDetailById")]
+        [Route("LoginUserDetailById/{id}")]
         public ActionResult<List<User>> LoginUserDetailById(int id)
         {
             try

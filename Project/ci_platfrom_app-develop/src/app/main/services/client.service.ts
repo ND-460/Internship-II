@@ -20,6 +20,8 @@ export class ClientService {
   }
 
   loginUserDetailById(id: any): Observable<User[]> {
+    
+
     return this.http.get<User[]>(`${this.apiUrl + API_ENDPOINTS.AUTH.GET_LOGIN_USER_BY_ID}/${id}`)
   }
 

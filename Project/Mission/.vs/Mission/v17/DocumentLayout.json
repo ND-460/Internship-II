@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Internship-II\\Project\\Mission\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|d:\\internship-ii\\project\\mission\\mission.repositories\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|solutionrelative:mission.repositories\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|d:\\internship-ii\\project\\mission\\mission\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|solutionrelative:mission\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D752E97-71FD-467F-A411-227ADAB7B29B}|Mission\\Mission.csproj|d:\\internship-ii\\project\\mission\\mission\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|d:\\internship-ii\\project\\mission\\mission.services\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02856F4D-402C-4547-96A4-1412D5C66B37}|Mission.Services\\Mission.Services.csproj|solutionrelative:mission.services\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|d:\\internship-ii\\project\\mission\\mission.repositories\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|solutionrelative:mission.repositories\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB69E46A-A7FF-4366-B476-0A10333B1193}|Mission.Repositories\\Mission.Repositories.csproj|d:\\internship-ii\\project\\mission\\mission.repositories\\irepositories\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,13 +50,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminUserController.cs",
+              "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\AdminUserController.cs",
+              "RelativeDocumentMoniker": "Mission\\Controllers\\AdminUserController.cs",
+              "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\AdminUserController.cs",
+              "RelativeToolTip": "Mission\\Controllers\\AdminUserController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:10:47.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Mission\\Controllers\\LoginController.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Mission\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAewEgAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwEgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T13:08:56.746Z",
               "EditorCaption": ""
@@ -65,14 +82,14 @@
               "RelativeDocumentMoniker": "Mission.Services\\Services\\LoginService.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Services\\Services\\LoginService.cs",
               "RelativeToolTip": "Mission.Services\\Services\\LoginService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDYAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwDEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T13:07:50.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ILoginService.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission.Services\\IServices\\ILoginService.cs",
               "RelativeDocumentMoniker": "Mission.Services\\IServices\\ILoginService.cs",
@@ -80,25 +97,24 @@
               "RelativeToolTip": "Mission.Services\\IServices\\ILoginService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAIAwwBMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T13:06:56.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T13:06:56.459Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LoginRepository.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission.Repositories\\Repositories\\LoginRepository.cs",
               "RelativeDocumentMoniker": "Mission.Repositories\\Repositories\\LoginRepository.cs",
               "ToolTip": "D:\\Internship-II\\Project\\Mission\\Mission.Repositories\\Repositories\\LoginRepository.cs",
               "RelativeToolTip": "Mission.Repositories\\Repositories\\LoginRepository.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwEQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T13:04:24.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ILoginRepository.cs",
               "DocumentMoniker": "D:\\Internship-II\\Project\\Mission\\Mission.Repositories\\IRepositories\\ILoginRepository.cs",
               "RelativeDocumentMoniker": "Mission.Repositories\\IRepositories\\ILoginRepository.cs",
@@ -106,8 +122,7 @@
               "RelativeToolTip": "Mission.Repositories\\IRepositories\\ILoginRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T13:01:04.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T13:01:04.221Z"
             }
           ]
         }

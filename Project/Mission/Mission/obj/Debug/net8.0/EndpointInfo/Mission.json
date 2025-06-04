@@ -17,15 +17,16 @@
         }
       }
     },
-    "/api/AdminUser/DeleteUser": {
+    "/api/AdminUser/DeleteUser/{userId}": {
       "delete": {
         "tags": [
           "AdminUser"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "query",
+            "name": "userId",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -166,7 +167,7 @@
         }
       }
     },
-    "/api/Login/LoginUserDetailById": {
+    "/api/Login/LoginUserDetailById/{id}": {
       "get": {
         "tags": [
           "Login"
@@ -174,7 +175,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
