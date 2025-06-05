@@ -208,7 +208,7 @@
       }
     },
     "/api/Login/UpdateUser": {
-      "put": {
+      "post": {
         "tags": [
           "Login"
         ],
@@ -336,7 +336,7 @@
       }
     },
     "/api/MissionSkill/UpdateMissionSkill": {
-      "put": {
+      "post": {
         "tags": [
           "MissionSkill"
         ],
@@ -456,7 +456,7 @@
       }
     },
     "/api/MissionTheme/UpdateMissionTheme": {
-      "put": {
+      "post": {
         "tags": [
           "MissionTheme"
         ],

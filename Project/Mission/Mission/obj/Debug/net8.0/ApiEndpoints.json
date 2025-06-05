@@ -123,7 +123,7 @@
     "ContainingType": "Mission.Controllers.LoginController",
     "Method": "UpdateUser",
     "RelativePath": "api/Login/UpdateUser",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -222,7 +222,7 @@
     "ContainingType": "Mission.Controllers.MissionSkillController",
     "Method": "UpdateMissionSkill",
     "RelativePath": "api/MissionSkill/UpdateMissionSkill",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -296,7 +296,7 @@
     "ContainingType": "Mission.Controllers.MissionThemeController",
     "Method": "UpdateMissionTheme",
     "RelativePath": "api/MissionTheme/UpdateMissionTheme",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

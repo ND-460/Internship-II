@@ -53,7 +53,7 @@ namespace Mission.Controllers
             return Ok(new ResponseResult() { Data = res, Result = ResponseStatus.Success, Message = "" });
         }
 
-        [HttpPut]
+        [HttpPost]
         [Route("UpdateMissionTheme")]
         public async Task<IActionResult> UpdateMissionTheme(MissionThemeViewModel missionThemeViewModel)
         {
