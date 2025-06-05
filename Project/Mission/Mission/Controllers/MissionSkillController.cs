@@ -67,7 +67,7 @@ namespace Mission.Controllers
         }
 
         [HttpDelete]
-        [Route("DeleteMissionSkill{id:int}")]
+        [Route("DeleteMissionSkill/{id:int}")]
         public async Task<IActionResult> DeleteMissionSkill(int id)
         {
             var res = await _missionSkillService.DeleteMissionSkill(id);

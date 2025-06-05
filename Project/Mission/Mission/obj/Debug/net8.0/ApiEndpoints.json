@@ -179,7 +179,7 @@
   {
     "ContainingType": "Mission.Controllers.MissionSkillController",
     "Method": "DeleteMissionSkill",
-    "RelativePath": "api/MissionSkill/DeleteMissionSkill{id}",
+    "RelativePath": "api/MissionSkill/DeleteMissionSkill/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

@@ -366,7 +366,7 @@
         }
       }
     },
-    "/api/MissionSkill/DeleteMissionSkill{id}": {
+    "/api/MissionSkill/DeleteMissionSkill/{id}": {
       "delete": {
         "tags": [
           "MissionSkill"
