@@ -29,7 +29,7 @@ namespace Mission.Repositories.Repositories
             if (missionThemeExistingInDb == null)
                 return false;
 
-            _missionDbContext.Remove(missionThemeExistingInDb);
+            _missionDbContext.MissionThemes.Remove(missionThemeExistingInDb);
             await _missionDbContext.SaveChangesAsync();
             return true;
         }

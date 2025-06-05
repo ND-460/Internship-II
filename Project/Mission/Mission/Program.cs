@@ -36,6 +36,9 @@ builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<IMissionThemeRepository, MissionThemeRepository>();
 builder.Services.AddScoped<IMissionThemeService, MissionThemeService>();
 
+builder.Services.AddScoped<IMissionSkillService, MissionSkillService>();
+builder.Services.AddScoped<IMissionSkillRepository, MissionSkillRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

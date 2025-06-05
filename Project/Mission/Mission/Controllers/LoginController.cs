@@ -74,7 +74,7 @@ namespace Mission.Controllers
                 return NotFound("Login User not found");
             }
         }
-        [HttpPost]
+        [HttpPut]
         [Route("UpdateUser")]
         public ActionResult UpdateUser([FromForm] UpdateUserDto userData)
         {

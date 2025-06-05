@@ -2,38 +2,39 @@
 using Mission.Entities.Models;
 using Mission.Entities;
 using Mission.Services.IServices;
+using Mission.Services.Services;
 
 namespace Mission.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MissionThemeController(IMissionThemeService missionThemeService) : ControllerBase
-    {
-        private readonly IMissionThemeService _missionThemeService = missionThemeService;
 
+    public class MissionSkillController(IMissionSkillService missionSkillService) : ControllerBase
+    {
+        private readonly IMissionSkillService _missionSkillService = missionSkillService;
         [HttpGet]
-        [Route("GetMissionThemeList")]
-        public async Task<IActionResult> GetAllMissionTheme()
+        [Route("GetMissionSkillList")]
+        public async Task<IActionResult> GetAllMissionSkill()
         {
             try
             {
-                var res = await _missionThemeService.GetAllMissionTheme();
+                var res = await _missionSkillService.GetAllMissionSkill();
                 return Ok(new ResponseResult() { Data = res, Result = ResponseStatus.Success, Message = "" });
             }
             catch
             {
-                return BadRequest(new ResponseResult() { Data = null, Result = ResponseStatus.Error, Message = "Failed to get mission theme" });
+                return BadRequest(new ResponseResult() { Data = null, Result = ResponseStatus.Error, Message = "Failed to get mission skill" });
             }
         }
 
         [HttpPost]
-        [Route("AddMissionTheme")]
-        public async Task<IActionResult> AddMissionTheme(MissionThemeViewModel missionThemeViewModel)
+        [Route("AddMissionSkill")]
+        public async Task<IActionResult> AddMissionSkill(MissionSkillViewModel missionSkillViewModel)
         {
             try
             {
-                var res = await _missionThemeService.AddMissionTheme(missionThemeViewModel);
-                return Ok(new ResponseResult() { Data = "Add Mission theme.", Result = ResponseStatus.Success, Message = "" });
+                var res = await _missionSkillService.AddMissionSkill(missionSkillViewModel);
+                return Ok(new ResponseResult() { Data = "Add Mission skill.", Result = ResponseStatus.Success, Message = "" });
             }
             catch
             {
@@ -42,10 +43,10 @@ namespace Mission.Controllers
         }
 
         [HttpGet]
-        [Route("GetMissionThemeById/{id:int}")]
-        public async Task<IActionResult> GetMissionThemeById(int id)
+        [Route("GetMissionSkillById/{id:int}")]
+        public async Task<IActionResult> GetMissionSkillById(int id)
         {
-            var res = await _missionThemeService.GetMissionThemeById(id);
+            var res = await _missionSkillService.GetMissionSkillById(id);
 
             if (res == null)
                 return NotFound(new ResponseResult() { Data = "Not Found", Result = ResponseStatus.Error, Message = "" });
@@ -54,10 +55,10 @@ namespace Mission.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateMissionTheme")]
-        public async Task<IActionResult> UpdateMissionTheme(MissionThemeViewModel missionThemeViewModel)
+        [Route("UpdateMissionSkill")]
+        public async Task<IActionResult> UpdateMissionSkill(MissionSkillViewModel missionSkillViewModel)
         {
-            var res = await _missionThemeService.UpdateMissionTheme(missionThemeViewModel);
+            var res = await _missionSkillService.UpdateMissionSkill(missionSkillViewModel);
 
             if (!res)
                 return NotFound(new ResponseResult() { Data = "Not Found", Result = ResponseStatus.Error, Message = "" });
@@ -66,10 +67,10 @@ namespace Mission.Controllers
         }
 
         [HttpDelete]
-        [Route("DeleteMissionTheme{id:int}")]
-        public async Task<IActionResult> DeleteMissionTheme(int id)
+        [Route("DeleteMissionSkill{id:int}")]
+        public async Task<IActionResult> DeleteMissionSkill(int id)
         {
-            var res = await _missionThemeService.DeleteMissionTheme(id);
+            var res = await _missionSkillService.DeleteMissionSkill(id);
 
             if (!res)
                 return NotFound(new ResponseResult() { Data = "Not Found", Result = ResponseStatus.Error, Message = "" });
