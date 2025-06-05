@@ -6,6 +6,8 @@ using Mission.Repositories;
 using Mission.Services.IServices;
 using Mission.Services;
 using Microsoft.EntityFrameworkCore;
+using Mission.Repositories.Repositories;
+using Mission.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +32,9 @@ builder.Services.AddScoped<IAdminUserRepository, AdminUserRepository>();
 
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+
+builder.Services.AddScoped<IMissionThemeRepository, MissionThemeRepository>();
+builder.Services.AddScoped<IMissionThemeService, MissionThemeService>();
 
 var app = builder.Build();
 
