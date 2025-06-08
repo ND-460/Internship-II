@@ -22,6 +22,145 @@ namespace Mission.Entities.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Mission.Entities.Entities.City", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CityName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("City");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CityName = "Ahmedabad",
+                            CountryId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CityName = "Rajkot",
+                            CountryId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CityName = "Surat",
+                            CountryId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CityName = "Jamnagar",
+                            CountryId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CityName = "New York",
+                            CountryId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CityName = "California",
+                            CountryId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CityName = "Texas",
+                            CountryId = 2
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CityName = "London",
+                            CountryId = 3
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CityName = "Manchester",
+                            CountryId = 3
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CityName = "Birmingham",
+                            CountryId = 3
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CityName = "Moscow",
+                            CountryId = 4
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CityName = "Saint Petersburg",
+                            CountryId = 4
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CityName = "Yekaterinburg",
+                            CountryId = 4
+                        });
+                });
+
+            modelBuilder.Entity("Mission.Entities.Entities.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CountryName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Country");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CountryName = "India"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CountryName = "USA"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CountryName = "UK"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CountryName = "Russia"
+                        });
+                });
+
             modelBuilder.Entity("Mission.Entities.Entities.MissionSkill", b =>
                 {
                     b.Property<int>("Id")
@@ -62,6 +201,95 @@ namespace Mission.Entities.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MissionThemes");
+                });
+
+            modelBuilder.Entity("Mission.Entities.Entities.Missions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("MissionAvailability")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionDescription")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionDocuments")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionImages")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionOrganisationDetail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionOrganisationName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionSkillId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("MissionThemeId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("MissionTitle")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MissionVideoUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("RegistrationDeadLine")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int?>("TotalSheets")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("MissionThemeId");
+
+                    b.ToTable("Missions");
                 });
 
             modelBuilder.Entity("Mission.Entities.User", b =>
@@ -135,6 +363,43 @@ namespace Mission.Entities.Migrations
                             UserImage = "",
                             UserType = "admin"
                         });
+                });
+
+            modelBuilder.Entity("Mission.Entities.Entities.Missions", b =>
+                {
+                    b.HasOne("Mission.Entities.Entities.City", "City")
+                        .WithMany("Missions")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Mission.Entities.Entities.Country", "Country")
+                        .WithMany("Missions")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Mission.Entities.Entities.MissionTheme", "MissionTheme")
+                        .WithMany()
+                        .HasForeignKey("MissionThemeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
+
+                    b.Navigation("Country");
+
+                    b.Navigation("MissionTheme");
+                });
+
+            modelBuilder.Entity("Mission.Entities.Entities.City", b =>
+                {
+                    b.Navigation("Missions");
+                });
+
+            modelBuilder.Entity("Mission.Entities.Entities.Country", b =>
+                {
+                    b.Navigation("Missions");
                 });
 #pragma warning restore 612, 618
         }
