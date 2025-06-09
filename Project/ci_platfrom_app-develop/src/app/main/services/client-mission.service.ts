@@ -16,7 +16,8 @@ export class ClientMissionService {
 
   //HomePage
   missionList(userId: any): Observable<Mission[]> {
-    return this.http.get<Mission[]>(`${this.apiUrl + API_ENDPOINTS.CLIENT_MISSION.LIST}/${userId}`)
+    // return this.http.get<Mission[]>(`${this.apiUrl + API_ENDPOINTS.CLIENT_MISSION.LIST}/${userId}`)
+    return this.http.get<Mission[]>(`${this.apiUrl + API_ENDPOINTS.CLIENT_MISSION.LIST}`)
   }
 
   missionClientList(data: any) {

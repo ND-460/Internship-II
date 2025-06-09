@@ -1,3 +1,5 @@
 Documents/
 Postgresql/dvdrental.tar
 VCS Project/
+# Ignore large zip file
+Project/ci_platfrom_app-develop.zip

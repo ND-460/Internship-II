@@ -12,5 +12,10 @@ namespace Mission.Services.IServices
     {
         List<Missions> GetMissionList();
         Task<string> AddMission(AddMissionRequestModel model);
+
+        Task<List<MissionRequestViewModel>> GetAllMissionAsync();
+        Task<MissionRequestViewModel?> GetMissionById(int id);
+
+        Task<IList<MissionDetailResponseModel>> ClientSideMissionList();
     }
 }

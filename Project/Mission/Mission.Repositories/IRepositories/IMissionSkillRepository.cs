@@ -19,5 +19,7 @@ namespace Mission.Repositories.IRepositories
         Task<bool> UpdateMissionSkill(MissionSkill missionSkill);
 
         Task<bool> DeleteMissionSkill(int missionSkillId);
+
+         string GetMissionSkills(string skillIds);
     }
 }

@@ -226,27 +226,11 @@ namespace Mission.Entities.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("MissionAvailability")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("MissionDescription")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("MissionDocuments")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("MissionImages")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("MissionOrganisationDetail")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("MissionOrganisationName")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -258,14 +242,6 @@ namespace Mission.Entities.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("MissionTitle")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("MissionType")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("MissionVideoUrl")
                         .IsRequired()
                         .HasColumnType("text");
 

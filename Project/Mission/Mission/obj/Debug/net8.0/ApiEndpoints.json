@@ -26,6 +26,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Mission.Controllers.ClientMissionController",
+    "Method": "ClientSideMissionList",
+    "RelativePath": "api/ClientMission/ClientSideMissionList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Mission.Controllers.CommonController",
     "Method": "CityList",
     "RelativePath": "api/Common/CityList/{countryId}",
@@ -350,23 +360,29 @@
   },
   {
     "ContainingType": "Mission.Controllers.MissionController",
-    "Method": "MissionList",
+    "Method": "GetMissionById",
+    "RelativePath": "api/Mission/MissionDetailById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mission.Controllers.MissionController",
+    "Method": "GetAllMissionAsync",
     "RelativePath": "api/Mission/MissionList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "Mission.Entities.ResponseResult",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Mission.Controllers.MissionSkillController",

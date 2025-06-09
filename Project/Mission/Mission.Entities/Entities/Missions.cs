@@ -18,10 +18,6 @@ namespace Mission.Entities.Entities
 
         public string MissionDescription { get; set; }
 
-        public string MissionOrganisationName { get; set; }
-
-        public string MissionOrganisationDetail { get; set; }
-
         public int CountryId { get; set; }
 
         public int CityId { get; set; }
@@ -29,8 +25,6 @@ namespace Mission.Entities.Entities
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
-
-        public string MissionType { get; set; }
 
         public int? TotalSheets { get; set; }
 
@@ -42,11 +36,6 @@ namespace Mission.Entities.Entities
 
         public string MissionImages { get; set; }
 
-        public string MissionDocuments { get; set; }
-
-        public string MissionAvailability { get; set; }
-
-        public string MissionVideoUrl { get; set; }
 
         [ForeignKey(nameof(CountryId))]
         public virtual Country Country { get; set; } = null!;
@@ -57,5 +46,6 @@ namespace Mission.Entities.Entities
         [ForeignKey(nameof(MissionThemeId))]
         public virtual MissionTheme MissionTheme { get; set; } = null!;
 
+        
     }
 }

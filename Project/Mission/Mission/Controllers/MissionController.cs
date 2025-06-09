@@ -2,6 +2,7 @@
 using Mission.Entities;
 using Mission.Entities.Models;
 using Mission.Services.IServices;
+using Mission.Services.Services;
 
 namespace Mission.Controllers
 {
@@ -9,12 +10,12 @@ namespace Mission.Controllers
     [Route("api/[controller]")]
     public class MissionController(IMissionService missionService) : Controller
     {
-        [HttpGet]
-        [Route("MissionList")]
-        public ResponseResult MissionList()
-        {
-            return new ResponseResult() { Data = missionService.GetMissionList(), Message = "", Result = ResponseStatus.Success };
-        }
+        //[HttpGet]
+        //[Route("MissionList")]
+        //public ResponseResult MissionList()
+        //{
+        //    return new ResponseResult() { Data = missionService.GetMissionList(), Message = "", Result = ResponseStatus.Success };
+        //}
 
         [HttpPost]
         [Route("AddMission")]
@@ -36,6 +37,21 @@ namespace Mission.Controllers
                 result.Result = ResponseStatus.Error;
                 return BadRequest(result);
             }
+        }
+        [HttpGet]
+        [Route("MissionList")]
+        public async Task<IActionResult> GetAllMissionAsync()
+        {
+            var response = await missionService.GetAllMissionAsync();
+            return Ok(new ResponseResult() { Data = response, Result = ResponseStatus.Success, Message = "" });
+        }
+
+        [HttpGet]
+        [Route("MissionDetailById/{id:int}")]
+        public async Task<IActionResult> GetMissionById(int id)
+        {
+            var response = await missionService.GetMissionById(id);
+            return Ok(new ResponseResult() { Data = response, Result = ResponseStatus.Success, Message = "" });
         }
     }
 }

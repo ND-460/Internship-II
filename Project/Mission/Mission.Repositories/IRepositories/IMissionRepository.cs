@@ -12,5 +12,10 @@ namespace Mission.Repositories.IRepositories
     {
         List<Missions> GetMissionList();
         Task<string> AddMission(AddMissionRequestModel model);
+
+        Task<List<MissionRequestViewModel>> GetAllMissionAsync();
+        Task<MissionRequestViewModel?> GetMissionById(int id);
+
+        Task<IList<Missions>> ClientSideMissionList();
     }
 }
