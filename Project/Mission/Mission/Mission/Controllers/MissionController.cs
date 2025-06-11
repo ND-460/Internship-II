@@ -22,16 +22,13 @@ namespace Mission.Controllers
 
         [HttpPost]
         [Route("UpdateMission")]
-        public ActionResult UpdateMission(UpdateMissionRequestModel model)
+        public IActionResult UpdateMission(UpdateMissionRequestModel model)
         {
             ResponseResult result = new ResponseResult();
             try
             {
-                var data = missionService.UpdateMission(model);
-                result.Data = data;
-                result.Message = "Success";
-                result.Result = ResponseStatus.Success;
-                return Ok(result);
+                var response = _missionService.UpdateMission(model);
+                return Ok(new ResponseResult() { Data = response, Result = ResponseStatus.Success, Message = "" });
             }
             catch (Exception ex)
             {
@@ -44,7 +41,7 @@ namespace Mission.Controllers
 
         [HttpDelete]
         [Route("DeleteMission/{id}")]
-        public ActionResult DeleteMission(int id)
+        public IActionResult DeleteMission(int id)
         {
             try
             {

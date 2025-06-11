@@ -6,27 +6,33 @@ using Mission.Repositories.IRepositories;
 
 namespace Mission.Repositories.Repositories
 {
-    public class MissionRepository(MissionDbContext dbContext) : IMissionRepository
+    public class MissionRepository(MissionDbContext dbContext, IMissionThemeRepository missionThemeRepository) : IMissionRepository
     {
         private readonly MissionDbContext _dbContext = dbContext;
+        private readonly IMissionThemeRepository _missionThemeRepository = missionThemeRepository;
 
         public Task<List<MissionRequestViewModel>> GetAllMissionAsync()
         {
-            return _dbContext.Missions.Select(m => new MissionRequestViewModel()
-            {
-                Id = m.Id,
-                CityId = m.CityId,
-                CountryId = m.CountryId,
-                EndDate = m.EndDate,
-                MissionDescription = m.MissionDescription,
-                MissionImages = m.MissionImages,
-                MissionSkillId = m.MissionSkillId,
-                MissionThemeId = m.MissionThemeId,
-                MissionTitle = m.MissionTitle,
-                StartDate = m.StartDate,
-                TotalSeats = m.TotalSheets ?? 0,
-            }).ToListAsync();
+            return (from m in _dbContext.Missions
+                    join t in _dbContext.MissionThemes on m.MissionThemeId equals t.Id
+                    where !m.IsDeleted
+                    select new MissionRequestViewModel
+                    {
+                        Id = m.Id,
+                        CityId = m.CityId,
+                        CountryId = m.CountryId,
+                        EndDate = m.EndDate,
+                        MissionDescription = m.MissionDescription,
+                        MissionImages = m.MissionImages,
+                        MissionSkillId = m.MissionSkillId,
+                        MissionThemeId = m.MissionThemeId,
+                        MissionTitle = m.MissionTitle,
+                        StartDate = m.StartDate,
+                        TotalSeats = m.TotalSheets ?? 0,
+                        MissionThemeName = t.ThemeName
+                    }).ToListAsync();
         }
+
 
         public async Task<MissionRequestViewModel?> GetMissionById(int id)
         {
@@ -139,10 +145,29 @@ namespace Mission.Repositories.Repositories
             }
         }
 
-        public List<MissionApplication> GetMissionApplicationList()
+        public List<GetMissionApplicationList> GetMissionApplicationList()
         {
-            return _dbContext.MissionApplications.Where(x => !x.IsDeleted).ToList();
+            var result = (from ma in _dbContext.MissionApplications
+                          join user in _dbContext.User on ma.UserId equals user.Id
+                          join mission in _dbContext.Missions on ma.MissionId equals mission.Id
+                          join theme in _dbContext.MissionThemes on mission.MissionThemeId equals theme.Id
+                          where !ma.IsDeleted
+                          select new GetMissionApplicationList
+                          {
+                              Id = ma.Id,
+                              MissionId = ma.MissionId,
+                              UserId = ma.UserId,
+                              AppliedDate = ma.AppliedDate,
+                              Status = ma.Status,
+                              Seats = ma.Seats,
+                              UserName = user.FirstName + " " + user.LastName,
+                              MissionTitle = mission.MissionTitle,
+                              MissionTheme = theme.ThemeName
+                          }).ToList();
+
+            return result;
         }
+
 
         public async Task<bool> MissionApplicationApprove(UpdateMissionApplicationModel missionApplication)
         {
@@ -151,6 +176,7 @@ namespace Mission.Repositories.Repositories
             if (tMissionApp == null) throw new Exception("Mission application not found");
 
             tMissionApp.Status = true;
+            //tMissionApp.IsDeleted = true;
             tMissionApp.ModifiedDate = DateTime.Now;
 
             _dbContext.MissionApplications.Update(tMissionApp);
@@ -173,7 +199,7 @@ namespace Mission.Repositories.Repositories
         }
 
 
-        public async Task<string> UpdateMission(UpdateMissionRequestModel model)
+        public async Task<bool> UpdateMission(UpdateMissionRequestModel model)
         {
             var existingMission = await dbContext.Missions
                 .Where(x => x.Id == model.Id && !x.IsDeleted)
@@ -197,13 +223,13 @@ namespace Mission.Repositories.Repositories
             dbContext.Entry(existingMission).CurrentValues.SetValues(model);
 
             await dbContext.SaveChangesAsync();
-            return "Mission updated successfully!";
+            return true;
         }
 
         public async Task<string> DeleteMission(int id)
         {
             var mission = await dbContext.Missions
-                .Where(x => x.Id == id && !x.IsDeleted)
+                .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
 
             if (mission == null)

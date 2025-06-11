@@ -12,11 +12,11 @@ namespace Mission.Repositories.IRepositories
 
         Task<bool> ApplyMission(AddMissionApplicationRequestModel model);
 
-        List<MissionApplication> GetMissionApplicationList();
+        List<GetMissionApplicationList> GetMissionApplicationList();
         Task<bool> MissionApplicationApprove(UpdateMissionApplicationModel missionApplication);
 
         Task<bool> MissionApplicationDelete(UpdateMissionApplicationModel missionApplication);
-        Task<string> UpdateMission(UpdateMissionRequestModel model);
+        Task<bool> UpdateMission(UpdateMissionRequestModel model);
 
         Task<string> DeleteMission(int id);
     }

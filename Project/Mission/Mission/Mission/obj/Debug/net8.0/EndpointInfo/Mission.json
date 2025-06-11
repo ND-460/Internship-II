@@ -1404,6 +1404,10 @@
           "missionSkillId": {
             "type": "string",
             "nullable": true
+          },
+          "missionThemeName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

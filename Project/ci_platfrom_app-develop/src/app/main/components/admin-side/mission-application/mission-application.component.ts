@@ -37,7 +37,7 @@ export class MissionApplicationComponent implements OnInit, OnDestroy {
   }
 
   getStatus(status) {
-    return status ? 'Approve' : 'Pending';
+    return status ? 'Approved' : 'Pending';
   }
 
   fetchMissionApplicationList() {

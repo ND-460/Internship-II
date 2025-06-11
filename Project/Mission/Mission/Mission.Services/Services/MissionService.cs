@@ -29,7 +29,7 @@ namespace Mission.Services.Services
             return _missionRepository.AddMission(mission);
         }
 
-        public async Task<string> UpdateMission(UpdateMissionRequestModel model)
+        public async Task<bool> UpdateMission(UpdateMissionRequestModel model)
         {
             return await missionRepository.UpdateMission(model);
         }
@@ -84,7 +84,7 @@ namespace Mission.Services.Services
             return await _missionRepository.ApplyMission(model);
         }
 
-        public List<MissionApplication> GetMissionApplicationList()
+        public List<GetMissionApplicationList> GetMissionApplicationList()
         {
             return _missionRepository.GetMissionApplicationList();
         }

@@ -22,5 +22,7 @@ namespace Mission.Entities.Models
         public DateTime EndDate { get; set; }
         public string MissionImages { get; set; }
         public string MissionSkillId { get; set; }
+
+        public string MissionThemeName { get; set; }
     }
 }
