@@ -60,5 +60,14 @@ namespace Mission.Services
             user.UserType = updateUserDto.UserType;
             return _loginRepository.UpdateUser(user);
         }
+        public async Task<bool> LoginUserProfileUpdate(AddUserDetailsRequestModel requestModel)
+        {
+            return await _loginRepository.LoginUserProfileUpdate(requestModel);
+        }
+
+        public AddUserDetailsRequestModel GetUserProfileDetailById(int id)
+        {
+            return _loginRepository.GetUserProfileDetailById(id);
+        }
     }
 }

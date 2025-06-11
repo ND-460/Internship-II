@@ -1,6 +1,7 @@
 ﻿using Mission.Entities;
 using Microsoft.EntityFrameworkCore;
 using Mission.Entities.Entities;
+using Mission.Entity.Entities;
 
 namespace Mission.Entities.Context
 {
@@ -14,6 +15,9 @@ namespace Mission.Entities.Context
         public DbSet<City> City { get; set; }
         public DbSet<Missions> Missions { get; set; }
         public DbSet<MissionApplication> MissionApplications { get; set; }
+
+        public DbSet<UserDetail> UserDetails { get; set; }
+        public DbSet<UserSkills> UserSkills { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

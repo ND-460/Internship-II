@@ -15,7 +15,9 @@ namespace Mission.Repositories.IRepositories
         UserResponseModel LoginUserDetailById(int id);
 
         User UpdateUser(User user);
-
+        Task<bool> LoginUserProfileUpdate(AddUserDetailsRequestModel requestModel);
         User GetUser(int id);
+
+        AddUserDetailsRequestModel GetUserProfileDetailById(int id);
     }
 }

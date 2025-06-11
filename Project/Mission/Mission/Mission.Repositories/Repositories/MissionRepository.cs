@@ -180,7 +180,7 @@ namespace Mission.Repositories.Repositories
                 .FirstOrDefaultAsync();
 
             if (existingMission == null)
-                throw new KeyNotFoundException("Mission not found!");
+                throw new Exception("Mission not found!");
 
             var isExist = await dbContext.Missions
                 .AnyAsync(x => x.MissionTitle == model.MissionTitle &&
@@ -191,7 +191,7 @@ namespace Mission.Repositories.Repositories
                                x.Id != model.Id);
 
             if (isExist)
-                throw new InvalidOperationException("Another mission with the same details already exists!");
+                throw new Exception("Another mission with the same details already exists!");
 
 
             dbContext.Entry(existingMission).CurrentValues.SetValues(model);

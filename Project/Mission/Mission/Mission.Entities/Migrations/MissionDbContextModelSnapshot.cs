@@ -392,10 +392,123 @@ namespace Mission.Entities.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Mission.Entities.UserSkills", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Skill")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserSkills");
+                });
+
+            modelBuilder.Entity("Mission.Entity.Entities.UserDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Availability")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("LinkedInUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Manager")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("MyProfile")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MySkills")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserImage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("WhyIVolunteer")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserDetail");
+                });
+
             modelBuilder.Entity("Mission.Entities.MissionApplication", b =>
                 {
                     b.HasOne("Mission.Entities.Missions", "Mission")
-                        .WithMany()
+                        .WithMany("MissionApplications")
                         .HasForeignKey("MissionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -438,6 +551,17 @@ namespace Mission.Entities.Migrations
                     b.Navigation("MissionTheme");
                 });
 
+            modelBuilder.Entity("Mission.Entity.Entities.UserDetail", b =>
+                {
+                    b.HasOne("Mission.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Mission.Entities.City", b =>
                 {
                     b.Navigation("Missions");
@@ -446,6 +570,11 @@ namespace Mission.Entities.Migrations
             modelBuilder.Entity("Mission.Entities.Country", b =>
                 {
                     b.Navigation("Missions");
+                });
+
+            modelBuilder.Entity("Mission.Entities.Missions", b =>
+                {
+                    b.Navigation("MissionApplications");
                 });
 #pragma warning restore 612, 618
         }

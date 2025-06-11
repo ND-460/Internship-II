@@ -11,7 +11,9 @@ namespace Mission.Services.IServices
 
         Task<string> RegisterUser(RegisterUserRequestModel registerUserRequest);
         UserResponseModel LoginUserDetailById(int id);
-
+        Task<bool> LoginUserProfileUpdate(AddUserDetailsRequestModel requestModel);
         User UpdateUser(UpdateUserDto updateUserDto);
+
+        AddUserDetailsRequestModel GetUserProfileDetailById(int id);
     }
 }

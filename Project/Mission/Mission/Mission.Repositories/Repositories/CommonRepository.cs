@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using Mission.Entities;
 
 namespace Mission.Repositories.Repositories
 {
@@ -84,6 +85,28 @@ namespace Mission.Repositories.Repositories
 
             return missionSkill;
         }
+        public List<DropDownResponseModel> GetUserSkill(int userId)
+        {
+            var userSkill = _cIDbContext.UserSkills
+                .Where(m => m.UserId == userId)
+                .Select(m => new DropDownResponseModel(m.Id, m.Skill))
+                .ToList();
 
+            return userSkill;
+        }
+
+        public async Task<bool> AddUserSkill(UserSkills skills)
+        {
+            try
+            {
+                await _cIDbContext.UserSkills.AddAsync(skills);
+                await _cIDbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

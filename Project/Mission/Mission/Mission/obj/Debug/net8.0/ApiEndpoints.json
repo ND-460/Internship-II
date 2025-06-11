@@ -59,6 +59,32 @@
   },
   {
     "ContainingType": "Mission.Api.Controllers.CommonController",
+    "Method": "AddUserSkill",
+    "RelativePath": "api/Common/AddUserSkill",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skills",
+        "Type": "Mission.Entities.UserSkills",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Mission.Entities.ResponseResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mission.Api.Controllers.CommonController",
     "Method": "CityList",
     "RelativePath": "api/Common/CityList/{countryId}",
     "HttpMethod": "GET",
@@ -91,6 +117,32 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Mission.Entities.ResponseResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mission.Api.Controllers.CommonController",
+    "Method": "GetUserSkill",
+    "RelativePath": "api/Common/GetUserSkill/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "Mission.Entities.ResponseResult",
@@ -215,6 +267,32 @@
   },
   {
     "ContainingType": "Mission.Controllers.LoginController",
+    "Method": "GetUserProfileDetailById",
+    "RelativePath": "api/Login/GetUserProfileDetailById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Mission.Entities.ResponseResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mission.Controllers.LoginController",
     "Method": "LoginUser",
     "RelativePath": "api/Login/LoginUser",
     "HttpMethod": "POST",
@@ -264,6 +342,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Mission.Controllers.LoginController",
+    "Method": "LoginUserProfileUpdate",
+    "RelativePath": "api/Login/LoginUserProfileUpdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestModel",
+        "Type": "Mission.Entities.Models.AddUserDetailsRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Mission.Controllers.LoginController",

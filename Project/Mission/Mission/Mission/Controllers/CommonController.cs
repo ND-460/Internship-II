@@ -181,6 +181,39 @@ namespace Mission.Api.Controllers
             }
             
         }
+        [HttpGet]
+        [Route("GetUserSkill/{userId}")]
+        public ResponseResult GetUserSkill(int userId)
+        {
+            try
+            {
+                result.Data = _commonService.GetUserSkill(userId);
+                result.Result = ResponseStatus.Success;
+            }
+            catch (Exception ex)
+            {
+                result.Result = ResponseStatus.Error;
+                result.Message = ex.Message;
+            }
+            return result;
+        }
+
+        [HttpPost]
+        [Route("AddUserSkill")]
+        public async Task<ResponseResult> AddUserSkill(UserSkills skills)
+        {
+            try
+            {
+                result.Data = await _commonService.AddUserSkill(skills);
+                result.Result = ResponseStatus.Success;
+            }
+            catch (Exception ex)
+            {
+                result.Result = ResponseStatus.Error;
+                result.Message = ex.Message;
+            }
+            return result;
+        }
 
     }
 }

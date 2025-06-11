@@ -390,7 +390,7 @@ export class UserEditProfileComponent implements OnInit, OnDestroy {
           duration: APP_CONFIG.toastDuration,
         })
     );
-    
+
   }
 
   async onSubmit() {
@@ -460,8 +460,21 @@ export class UserEditProfileComponent implements OnInit, OnDestroy {
     }
 
   }
-  contactUs: ContactUs;
-  changePass: ChangePassword;
+  contactUs: ContactUs = {
+    id: 0,
+    userId: 0,
+    name: "",
+    emailAddress: "",
+    subject: "",
+    message: "",
+  };;
+  changePass: ChangePassword = {
+    id: 0,
+    userId: 0,
+    oldPassword: "",
+    newPassword: "",
+    confirmPassword: "",
+  };
 
   onSubmitContactUs(form: NgForm) {
     form.value.userId = this.contactUs.userId;
@@ -541,7 +554,7 @@ export class UserEditProfileComponent implements OnInit, OnDestroy {
   }
 
   onCancel() {
-    this._router.navigate(['/']);
+    this._router.navigate(['/home']);
   }
 
   openChangePasswordModal() {
